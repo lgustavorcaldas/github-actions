@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show a message
-        run: echo "Hello world"
+        run: ech "Hello world"
       - name: Multiple commands
         run: |
           node -v
