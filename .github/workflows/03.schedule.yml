@@ -1,0 +1,15 @@
+name: Schedule Workflow
+on: 
+  schedule:
+    - cron: "18 * * * *"
+
+jobs: 
+  using-schedule-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Hello world"
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
