@@ -1,0 +1,16 @@
+name: Trying pull_requests
+
+on: 
+  pull_request:
+    types: [closed, reopened, opened, assigned]
+
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Hello world"
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
