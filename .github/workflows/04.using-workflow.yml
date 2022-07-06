@@ -1,9 +1,13 @@
-name: Hello world
+name: Schedule Workflow
 
-on: [pull_request]
+on: 
+  workflow_run:
+    workflows: ["Hello World"]
+    types: 
+      - completed
 
 jobs: 
-  run-shell-command:
+  using-schedule-workflows:
     runs-on: ubuntu-latest
     steps:
       - name: Show a message
