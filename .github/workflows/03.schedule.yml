@@ -1,13 +1,14 @@
-name: Hello world
-
-on: [push, pull_request]
+name: Schedule Workflow
+on: 
+  schedule:
+    - cron: "18 * * * *"
 
 jobs: 
-  run-shell-command:
+  using-schedule-workflows:
     runs-on: ubuntu-latest
     steps:
       - name: Show a message
-        run: ech "Hello world"
+        run: echo "Hello world"
       - name: Multiple commands
         run: |
           node -v

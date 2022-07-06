@@ -1,0 +1,18 @@
+name: Schedule Workflow
+
+on: 
+  workflow_run:
+    workflows: ["Hello World"]
+    types: 
+      - completed
+
+jobs: 
+  using-schedule-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show a message
+        run: echo "Hello world"
+      - name: Multiple commands
+        run: |
+          node -v
+          npm -v
